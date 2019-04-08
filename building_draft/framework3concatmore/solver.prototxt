@@ -1,0 +1,24 @@
+net: "train_val.prototxt"
+test_iter: 0
+test_interval: 1000000
+average_loss: 100
+# lr for fine-tuning should be lower than when starting from scratch
+#debug_info: true
+base_lr: 1e-7
+#base_lr: 5e-8
+lr_policy: "fixed"
+gamma: 0.1
+iter_size: 8
+# stepsize should also be lower, as we're closer to being done
+#stepsize: 10000
+display: 100
+max_iter: 500000
+momentum: 0.9
+#clip_gradients: 10000
+# clip_gradients: 20000
+weight_decay: 0.02
+#weight_decay: 0.1
+snapshot: 4000
+snapshot_prefix: "/home/xbw/CNNmodels/catmore/"
+# uncomment the following to default to CPU mode solving
+# solver_mode: CPU 
